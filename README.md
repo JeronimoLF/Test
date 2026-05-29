@@ -11,26 +11,24 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-### Phone on same Wi‑Fi
-
-```bash
-npm run dev:lan
-```
-
-Then open `http://<your-pc-ipv4>:3000` on your phone (find IP with `ipconfig` on Windows).
-
 ## Deploy on Vercel
 
-1. Push this repo to GitHub.
-2. Import the repo at [vercel.com/new](https://vercel.com/new).
-3. Use defaults: **Framework: Next.js**, **Output Directory:** leave empty.
-4. Deploy.
+1. Push this repo to GitHub (`git push origin main`).
+2. Import at [vercel.com/new](https://vercel.com/new) from `JeronimoLF/Test`.
+3. Use these settings (important):
+   - **Framework Preset:** Next.js
+   - **Root Directory:** *(empty)*
+   - **Build Command:** *(default — `next build`)*
+   - **Output Directory:** *(empty — do not use `public`)*
+   - **Node.js Version:** 20.x or 22.x
+
+Do **not** add a custom `vercel.json` unless you know you need it — Vercel auto-detects Next.js from `package.json`.
 
 ## Scripts
 
-| Command        | Description              |
-| -------------- | ------------------------ |
-| `npm run dev`  | Dev server (localhost)   |
-| `npm run dev:lan` | Dev server (LAN access) |
-| `npm run build`| Production build         |
-| `npm run start`| Run production build     |
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Dev server (localhost) |
+| `npm run dev:lan` | Dev server (phone on same Wi‑Fi) |
+| `npm run build` | Production build |
+| `npm run start` | Run production build |
